@@ -18,7 +18,7 @@
 		<form action="generalJoin" id="form1" name="form1" enctype="multipart/form-data" method="post" onsubmit="return joinMember()" style="background: url('../image/society/main/back.jpg') no-repeat center center; background-size: cover;">
 		<fieldset>
 		<div class="page-header" style="border-left: 5px solid #1b809e; padding-top:0;">
-			<span data-langNum="101" style="font-size:25px; font-weight:bold; font-family:inherit; margin-left:1%;">회원가입[마스터 교육생]</span>
+			<span data-langNum="101" style="font-size:25px; font-weight:bold; font-family:inherit; margin-left:1%;">회원가입</span>
 		</div>
 		
 		<!-- 기본 정보 -->
@@ -57,14 +57,14 @@
 					<input type='text' placeholder='이메일 주소@도메인' id = "email" name="memberVo.email" required="required">
 				</li>
 				<li>
-					<label style="background: url('../image/society/bul_must.png') no-repeat 140px 6px;">전화번호</label>
+					<label style="background: url('../image/society/bul_must.png') no-repeat 140px 6px;">휴대폰번호</label>
 					<input type='text' id="tel" name="memberVo.phone" placeholder="숫자만 입력" required="required">
 				</li>
 			</ul>
-			<div id="master">
+<!-- 			<div id="master">
 				<label style="background: url('../image/society/bul_must.png') no-repeat 140px 6px;">마스터 기수</label>
 				<input type='text' id="masterN" name="memberVo.gisu" placeholder="숫자만 입력" required="required"> 기
-			</div>
+			</div> -->
 			<div id="btnCenter">
 				<input type="submit" value="저장하기" />
 				<input type="reset" onclick="location.href='../society/index'" value="취소" />
