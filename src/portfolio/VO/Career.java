@@ -53,6 +53,14 @@ public class Career {
 	public void setPosition(String position) {
 		this.position = position;
 	}
+
+	@Override
+	public String toString() {
+		return "Career [careerId=" + careerId + ", joinYear=" + joinYear + ", retirementYear=" + retirementYear
+				+ ", companyName=" + companyName + ", businessType=" + businessType + ", department=" + department
+				+ ", position=" + position + "]";
+	}
+	
 	
 	
 }
