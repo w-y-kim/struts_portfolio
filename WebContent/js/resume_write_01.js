@@ -301,109 +301,7 @@ $(document).ready(function() {
 	 
 	 
 }); 
-//언어팩 선언.
-var ko = {
-	101: '이력서관리'
-	, 102: '기본정보'
-	, 103: '이름'
-	, 104: '요미가나'
-	, 105: '생년월일'
-	, 106: '년'
-	, 107: '월'
-	, 108: '일'
-	, 109: '성별'
-	, 110: '남'
-	, 111: '여'
-	, 112: '주소'
-	, 113: '주소 요미가나'
-	
-	, 200: '학력, 관련교육 이수'
-	, 201: '입학'
-	, 202: '졸업'
-	, 203: '학교'
-	, 204: '전공'
-	, 205: '학위'
-	, 206: '비고'
-	, 207: '전공'
-	
-	, 300: '경력'
-	, 301: '입사'
-	, 302: '퇴사'
-	, 303: '회사명'
-	, 304: '업종'
-	, 305: '부서'
-	, 306: '직위'
-	
-	, 400: '프로그래밍 · 스킬'
-	, 401: '언어'
-	, 402: '기타'
-	
-	, 500: '면허, 자격'
-	, 501: '년'
-	, 502: '월'
-	, 503: '면허/자격'
-	, 504: '비고'
-	
-	, 600: '프로젝트 경력'
-	, 601: '프로젝트명'
-	, 602: '개발기간'
-	, 603: '소요기간'
-	, 604: '스킬분야'
-	, 605: '그외'
-	
-	, 700: '자기소개 · 지원동기'
-};
-var ja = {
-	101: '履歴書管理'
-	, 102: '基本情報'
-	, 103: '氏名'
-	, 104: 'ヨミガナ'
-	, 105: '生年月日'
-	, 106: '年'
-	, 107: '月'
-	, 108: '日'
-	, 109: '性別'
-	, 110: '男'
-	, 111: '女'
-	, 112: '住所'
-	, 113: '住所 ヨミガナ'
-	
-	, 200: '学歴、関連教育履修'
-	, 201: '入学'
-	, 202: '卒業'
-	, 203: '学校'
-	, 204: '専攻'
-	, 205: '学位'
-	, 206: '備考'
-	, 207: '専攻'
-		
-	, 300: '経歴'
-	, 301: '入社'
-	, 302: '退社'
-	, 303: '会社名'
-	, 304: '業種'
-	, 305: '所属部署'
-	, 306: '職位'
-		
-	, 400: 'プログラミン · スキル'
-	, 401: '言語'
-	, 402: 'その他'
-	
-	, 500: '免許/資格'
-	, 501: '年'
-	, 502: '月'
-	, 503: '免許/資格'
-	, 504: '備考'
-	
-	, 600: 'プロジェクト経歴'
-	, 601: 'プロジェクト名'
-	, 602: '開発期間'
-	, 603: '所要期間'
-	, 604: 'スキル分野'
-	, 605: 'その他'
-	
-	, 700: '自己紹介 · 志願動機'
-};
+
 /**
 * setLanguage 
 * use $.lang[currentLanguage][languageNumber]
@@ -423,18 +321,15 @@ function setLanguage(lngType) {
 	}
 	setTagValueLng(lngType);
 }
-function setTagValueLng(lngType){
-	if(lngType == 'ko'){
+function setTagValueLng(){
+	
 		/* document.getElementById("ok").value = "등록/수정"; */
 		document.getElementById("delete").value = "삭제";
-	}
-	else if(lngType == 'ja'){
-		document.getElementById("ok").value = "登録/修正";
-		document.getElementById("delete").value = "削除";
-	}
+	
+	
 }
 
-function setLanguageFooter(lngType){
+function setLanguageFooter(){
 	
 }
 function checkForm() {
@@ -454,11 +349,9 @@ function checkForm() {
 	var lngType = sessionStorage.getItem("lngType");
 
 	if (name.value == '') {
-		if (lngType == 'ko') {
+		
 			alert('이름을 입력해주시기 바랍니다');
-		} else if (lngType == 'ja') {
-			alert('名前を入力してください');
-		}
+		
 		name.focus();
 
 		return false;
@@ -472,11 +365,9 @@ function checkForm() {
 	}
 
 	if (jpnName.value == '') {
-		if (lngType == 'ko') {
+		
 			alert('이름 일어표기를 입력해주시기 바랍니다');
-		} else if (lngType == 'ja') {
-			alert('名前の日本語表記を入力してください');
-		}
+		
 		jpnName.focus();
 
 		return false;
@@ -489,55 +380,45 @@ function checkForm() {
 	}
 
 	if (previewImg.value == '') {
-		if (lngType == 'ko') {
+		
 			alert('사진파일을 업로드 해주시기 바랍니다');
-		} else if (lngType == 'ja') {
-			alert('写真ファイルをアップロードしてください');
-		}
+		
 		previewImg.focus();
 
 		return false;
 	}
 
 	if (year.value.length != 4) {
-		if (lngType == 'ko') {
+		
 			alert('네 자리로 입력해 주세요');
-		} else if (lngType == 'ja') {
-			alert('YYYY形式で入力してください');
-		}
+		
 		year.focus();
 
 		return false;
 	}
 
 	if (month.value.length != 2) {
-		if (lngType == 'ko') {
+		
 			alert('두 자리로 입력해 주세요');
-		} else if (lngType == 'ja') {
-			alert('MM形式で入力してください');
-		}
+		 
 		month.focus();
 
 		return false;
 	}
 
 	if (day.value.length != 2) {
-		if (lngType == 'ko') {
+		
 			alert('두 자리로 입력해 주세요');
-		} else if (lngType == 'ja') {
-			alert('MM形式で入力してください');
-		}
+		
 		day.focus();
 
 		return false;
 	}
 
 	if (isNaN(year.value) || isNaN(month.value) || isNaN(day.value)) {
-		if (lngType == 'ko') {
+		
 			alert('숫자만 입력 가능합니다');
-		} else if (lngType == 'ja') {
-			alert('数字だけ入力してください');
-		}
+		
 		year.focus();
 
 		return false;
@@ -545,11 +426,9 @@ function checkForm() {
 
 	if (intro.value == null) {
 		$('#resume_check').attr("class", "alert alert-danger");
-		if (lngType == 'ko') {
+		
 			document.getElementById("resume_check").innerHTML = "자기소개를 입력해주시기 바랍니다";
-		} else if (lngType == 'ja') {
-			document.getElementById("resume_check").innerHTML = "自己紹介を入力してください";
-		}
+		
 		document.getElementById("resume_check").style.display = "block";
 		intro.focus();
 		return false;
