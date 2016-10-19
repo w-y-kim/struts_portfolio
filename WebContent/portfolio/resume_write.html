@@ -5,12 +5,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Soft Engineer Society</title>
 <!-- Latest compiled and minified CSS -->
+
 <!-- js -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="./js/resume_write_01.js"></script>
-<script type="text/javascript" src="./js/resume_write_02.js"></script>
 <script src="http://www.w3schools.com/lib/w3data.js"></script>
+
 <!-- css -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -18,7 +18,11 @@
 	crossorigin="anonymous">
 <link rel="stylesheet"
 	href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="./css/resume_write.css">
+<!-- 내부 -->
+<script type="text/javascript" src="./../include/js/resume_write_01.js"></script>
+<script type="text/javascript" src="./../include/js/resume_write_02.js"></script>
+<link rel="stylesheet" href="./../include/css/resume_write.css">
+
 
 </head>
 
@@ -42,13 +46,17 @@
 		</div>
 
 		<!-- include tab_menu.html by html5 -->
-		<!-- 		<div w3-include-html="./tab_menu.html"></div>
+		<div w3-include-html="./tab_menu.html"></div>
 		<script>
 			w3IncludeHTML();
 		</script>
- -->
+		<script type="text/javascript">
+		$('#myTab').css('width','50%'); 
+		$('#tab01').removeClass();
+		$('#tab02').addClass('active');
+		</script>
 		<!--  -->
-		<ul id="myTab" class="nav nav-tabs" role="tablist"
+		<!-- <ul id="myTab" class="nav nav-tabs" role="tablist"
 			style="width: 50%; margin-bottom: 3%;">
 			<li role="presentation" class=""><a href="./profile_modify.html"
 				role="tab" class="tab_font">개인정보 수정</a></li>
@@ -56,7 +64,7 @@
 				class="tab_font">기본이력서 관리</a></li>
 			<li role="presentation" class=""><a href="./resume_write.html"
 				role="tab" class="tab_font">자기소개서</a></li>
-		</ul>
+		</ul> -->
 		<!--  -->
 
 
@@ -88,13 +96,13 @@
 									onchange="previewImage(this,&#39;previewImg&#39;)"
 									style="width: 100%;"></td>
 							</tr>
-							<tr>
+							<!-- <tr>
 								<td data-langnum="104">요미가나</td>
 								<td><input readonly type="text" class="form-control"
 									maxlength="13" id="jpnName" name="resumeVO.mbr_name_yomi"
 									value=""></td>
 
-							</tr>
+							</tr> -->
 							<tr>
 								<td data-langnum="105">생년월일</td>
 								<td>
@@ -131,13 +139,13 @@
 									name="resumeVO.mbr_address" value=""></td>
 
 							</tr>
-							<tr>
+							<!-- <tr>
 								<td data-langnum="113">주소 요미가나</td>
 								<td colspan="2"><input readonly type="text"
 									class="form-control" id="jpnAddr" maxlength="250"
 									name="resumeVO.mbr_address_yomi" value=""></td>
 
-							</tr>
+							</tr> -->
 						</tbody>
 					</table>
 				</div>
