@@ -44,77 +44,63 @@ function check() {
 	var lngType = sessionStorage.getItem("lngType");
 
 	if (name.value == '') {
-		if (lngType == 'ko') {
+		
 			alert('이름을 입력해주시기 바랍니다');
-		} else if (lngType == 'ja') {
-			alert('名前を入力してください');
-		}
+		
 		name.focus();
 
 		return false;
 	}
 
 	if (jpnName.value == '') {
-		if (lngType == 'ko') {
+	
 			alert('이름 일어표기를 입력해주시기 바랍니다');
-		} else if (lngType == 'ja') {
-			alert('名前の日本語表記を入力してください');
-		}
+		
 		jpnName.focus();
 
 		return false;
 	}
 
 	if (previewImg.value == '') {
-		if (lngType == 'ko') {
+	
 			alert('사진파일을 업로드 해주시기 바랍니다');
-		} else if (lngType == 'ja') {
-			alert('写真ファイルをアップロードしてください');
-		}
+		
 		previewImg.focus();
 
 		return false;
 	}
 
 	if (year.value.length != 4) {
-		if (lngType == 'ko') {
+		
 			alert('네 자리로 입력해 주세요');
-		} else if (lngType == 'ja') {
-			alert('YYYY形式で入力してください');
-		}
+	
 		year.focus();
 
 		return false;
 	}
 
 	if (month.value.length != 2) {
-		if (lngType == 'ko') {
+		
 			alert('두 자리로 입력해 주세요');
-		} else if (lngType == 'ja') {
-			alert('MM形式で入力してください');
-		}
+		
 		month.focus();
 
 		return false;
 	}
 
 	if (day.value.length != 2) {
-		if (lngType == 'ko') {
+		
 			alert('두 자리로 입력해 주세요');
-		} else if (lngType == 'ja') {
-			alert('MM形式で入力してください');
-		}
+		
 		day.focus();
 
 		return false;
 	}
 
 	if (isNaN(year.value) || isNaN(month.value) || isNaN(day.value)) {
-		if (lngType == 'ko') {
+		
 			alert('숫자만 입력 가능합니다');
-		} else if (lngType == 'ja') {
-			alert('数字だけ入力してください');
-		}
+		
 		year.focus();
 
 		return false;
@@ -122,11 +108,9 @@ function check() {
 
 	if (intro.value == null) {
 		$('#resume_check').attr("class", "alert alert-danger");
-		if (lngType == 'ko') {
+		
 			document.getElementById("resume_check").innerHTML = "자기소개를 입력해주시기 바랍니다";
-		} else if (lngType == 'ja') {
-			document.getElementById("resume_check").innerHTML = "自己紹介を入力してください";
-		}
+		
 		document.getElementById("resume_check").style.display = "block";
 		intro.focus();
 		return false;
@@ -166,11 +150,9 @@ function insertResume() {
 function deleteResume() {
 	var lngType = sessionStorage.getItem("lngType");
 	var msg = "";
-	if (lngType == 'ko') {
+	
 		msg = "정말 삭제하시겠습니까?";
-	} else if (lngType == 'ja') {
-		msg = "本当に削除しますか?";
-	}
+	
 
 	if (!confirm(msg)) {
 		return false;

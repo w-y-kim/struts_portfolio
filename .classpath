@@ -14,6 +14,7 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="C:/Program Files/Java/jre1.8.0_101/lib/ext/ojdbc6.jar"/>
 	<classpathentry kind="lib" path="C:/JAVA/apache-tomcat-9.0.0.M8/apache-tomcat-9.0.0.M8/lib/annotations-api.jar"/>
 	<classpathentry kind="lib" path="C:/JAVA/apache-tomcat-9.0.0.M8/apache-tomcat-9.0.0.M8/lib/catalina.jar"/>
@@ -67,5 +68,7 @@
 	<classpathentry kind="lib" path="C:/Users/user/Desktop/apache-tomcat-9.0.0.M10-windows-x86/apache-tomcat-9.0.0.M10/lib/tomcat-websocket.jar"/>
 	<classpathentry kind="lib" path="C:/Users/user/Desktop/apache-tomcat-9.0.0.M10-windows-x86/apache-tomcat-9.0.0.M10/lib/websocket-api.jar"/>
 >>>>>>> 5d20095f32a7b29147e0c483b73ebbefebb4203f
+=======
+>>>>>>> 97df0f57a40725b090f2c7f246f98d8a3a481820
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
