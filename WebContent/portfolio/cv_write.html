@@ -49,14 +49,14 @@
 		<!-- include tab_menu.html by html5 -->
 		<div w3-include-html="./../include/tab_menu.html"></div>
 		<script>
-			w3IncludeHTML();
-		</script>
+         w3IncludeHTML();
+      </script>
 		<script type="text/javascript">
-		$(document).ready(function () {
-		$('#tab01').removeClass();
-		$('#tab03').addClass('active');
-		});
-		</script>
+      $(document).ready(function () {
+      $('#tab01').removeClass();
+      $('#tab03').addClass('active');
+      });
+      </script>
 		<!--  -->
 
 		<form id="resumeForm" method="post" enctype="multipart/form-data"
@@ -65,165 +65,7 @@
 				type="hidden" name="files" id="file2"> <input type="hidden"
 				name="files" id="file3">
 
-			<!-- 기본정보 -->
-			<div class="panel panel-danger">
-				<div class="panel-heading">
-					<div class="panel-title">
-						<lngtag data-langnum="102">기본정보</lngtag>
-					</div>
-				</div>
-				<div class="panel-body">
-					<table class="table table-bordered">
-						<tbody>
-							<tr>
-								<td data-langnum="103" style="width: 12%;">이름</td>
-								<td><input readonly type="text" class="form-control"
-									maxlength="10" id="name" name="resumeVO.mbr_name" value=""></td>
-								<td class="text-center" rowspan="4" style="width: 20%;"><img
-									id="previewImg" name="resumeVO.mbr_pic" style="width: 100px;"
-									src=""> <input type="file" value="업로드" id="upload"
-									name="upload"
-									onchange="previewImage(this,&#39;previewImg&#39;)"
-									style="width: 100%;"></td>
-							</tr>
-							<!-- <tr>
-								<td data-langnum="104">요미가나</td>
-								<td><input readonly type="text" class="form-control"
-									maxlength="13" id="jpnName" name="resumeVO.mbr_name_yomi"
-									value=""></td>
-
-							</tr> -->
-							<tr>
-								<td data-langnum="105">생년월일</td>
-								<td>
-									<div class="form-inline">
-										<input readonly="" type="text" class="form-control"
-											style="width: 25%;" maxlength="4" id="year"
-											name="memberVo.year" value="">
-										<lngtag data-langnum="106">년</lngtag>
-										<input readonly="" type="text" class="form-control"
-											style="width: 25%;" maxlength="2" id="month"
-											name="memberVo.month" value="">
-										<lngtag data-langnum="107">월</lngtag>
-										<input readonly="" type="text" class="form-control"
-											style="width: 25%;" maxlength="2" id="day"
-											name="memberVo.day" value="">
-										<lngtag data-langnum="108">일</lngtag>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td data-langnum="109">성별</td>
-								<td><label class="radio-inline"> <input
-										type="radio" name="resumeVO.mbr_sex" id="gender1" value="0"
-										disabled=""> <lngtag data-langnum="110">남</lngtag>
-								</label> <label class="radio-inline"> <input type="radio"
-										name="resumeVO.mbr_sex" id="gender2" value="1" disabled="">
-										<lngtag data-langnum="111">여</lngtag>
-								</label></td>
-							</tr>
-							<tr>
-								<td data-langnum="112">주소</td>
-								<td colspan="2"><input readonly type="text"
-									class="form-control" id="addr" maxlength="160"
-									name="resumeVO.mbr_address" value=""></td>
-
-							</tr>
-							<!-- <tr>
-								<td data-langnum="113">주소 요미가나</td>
-								<td colspan="2"><input readonly type="text"
-									class="form-control" id="jpnAddr" maxlength="250"
-									name="resumeVO.mbr_address_yomi" value=""></td>
-
-							</tr> -->
-						</tbody>
-					</table>
-				</div>
-			</div>
-
-			<!-- 학력, 관련교육 이수 -->
-			<div class="panel panel-danger">
-				<div class="panel-heading">
-					<div class="panel-title">
-						<lngtag data-langnum="200">학력, 관련교육 이수</lngtag>
-					</div>
-				</div>
-				<div class="panel-body">
-					<table class="table table-bordered" id="eduTable"
-						style="table-layout: fixed; text-align: left;">
-						<tbody>
-							<tr>
-								<td data-langnum="201">입학</td>
-								<td data-langnum="202">졸업</td>
-								<td colspan="2" data-langnum="203">학교</td>
-								<td colspan="2" data-langnum="207">전공</td>
-								<td data-langnum="205">학위</td>
-								<td data-langnum="206">비고</td>
-							</tr>
-						</tbody>
-						<tbody></tbody>
-
-
-						<input type="hidden" name="resumeVO.edu_seq" class="edu_seq"
-							value="17151">
-						<input type="hidden" name="resumeVO.edu_gubun" value="0">
-
-						<tbody>
-							<tr>
-								<td><input type="text" class="form-control" id="entrance0"
-									maxlength="11" name="resumeVO.edu_term_from" value=""></td>
-								<td><input type="text" class="form-control"
-									id="graduation0" maxlength="11" name="resumeVO.edu_term_to"
-									value=""></td>
-								<td colspan="2"><input size="25%" type="text"
-									class="form-control" maxlength="30" id="school0"
-									name="resumeVO.edu_school" value=""></td>
-								<td colspan="2"><input size="25%" type="text"
-									class="form-control" maxlength="30" id="major0"
-									name="resumeVO.edu_major" value=""></td>
-								<td><input type="text" class="form-control" id="degree0"
-									maxlength="20" name="resumeVO.edu_degree" value=""></td>
-								<td><input type="text" class="form-control" id="note0"
-									maxlength="20" name="resumeVO.edu_note" value=""></td>
-							</tr>
-
-
-							<input type="hidden" name="resumeVO.edu_seq" class="edu_seq"
-								value="17152">
-							<input type="hidden" name="resumeVO.edu_gubun" value="0">
-
-							<tr>
-								<td><input type="text" class="form-control" id="entrance0"
-									maxlength="11" name="resumeVO.edu_term_from" value=""></td>
-								<td><input type="text" class="form-control"
-									id="graduation0" maxlength="11" name="resumeVO.edu_term_to"
-									value=""></td>
-								<td colspan="2"><input size="25%" type="text"
-									class="form-control" maxlength="30" id="school0"
-									name="resumeVO.edu_school" value=""></td>
-								<td colspan="2"><input size="25%" type="text"
-									class="form-control" maxlength="30" id="major0"
-									name="resumeVO.edu_major" value=""></td>
-								<td><input type="text" class="form-control" id="degree0"
-									maxlength="20" name="resumeVO.edu_degree" value=""></td>
-								<td><input type="text" class="form-control" id="note0"
-									maxlength="20" name="resumeVO.edu_note" value=""></td>
-							</tr>
-
-
-
-
-
-
-
-
-						</tbody>
-					</table>
-					<input type="button" class="btn btn-default"
-						onclick="abilityRow(this)" value="+"> <input type="button"
-						class="btn btn-default" onclick="abilityRow(this)" value="-">
-				</div>
-			</div>
+			
 
 			<!-- 경력 -->
 			<div class="panel panel-danger">
@@ -303,63 +145,6 @@
 						class="btn btn-default" onclick="licenceRow(this)" value="-">
 				</div>
 			</div>
-
-			<!-- 프로젝트 경력 -->
-			<div class="panel panel-danger">
-				<div class="panel-heading">
-					<div class="panel-title">
-						<lngtag data-langnum="600">프로젝트 경력</lngtag>
-					</div>
-				</div>
-				<div class="panel-body">
-					<table class="table table-bordered table-hove " id="projectTable"
-						style="table-layout: fixed; text-align: left;">
-						<tbody>
-							<tr>
-								<th rowspan="2" data-langnum="601">프로젝트명</th>
-								<th rowspan="2" data-langnum="602">개발기간</th>
-								<th rowspan="2" data-langnum="603">소요기간</th>
-								<th colspan="3" data-langnum="604">스킬분야</th>
-							</tr>
-							<tr>
-								<td>Language</td>
-								<td>DB/OS</td>
-								<td data-langnum="605">그외</td>
-							</tr>
-						</tbody>
-						<tbody></tbody>
-
-
-
-						<input type="hidden" class="project" name="resumeVO.project_seq"
-							value="14984">
-						<tbody>
-							<tr>
-								<td><input type="text" class="form-control" id="compJoin0"
-									name="resumeVO.project_name" value="" maxlength="30"></td>
-								<td><input type="text" class="form-control" id="compLeave0"
-									name="resumeVO.project_term" value="" maxlength="33"></td>
-								<td><input type="text" class="form-control" id="compName0"
-									name="resumeVO.project_number" value="" maxlength="15"></td>
-								<td><input type="text" class="form-control" id="industry0"
-									name="resumeVO.project_lang" value="" maxlength="80"></td>
-								<td><input type="text" class="form-control" id="cert1"
-									name="resumeVO.project_db_os" value="" maxlength="80"></td>
-								<td><input type="text" class="form-control" id="cert1"
-									name="resumeVO.project_etc" value="" maxlength="80"></td>
-							</tr>
-
-
-						</tbody>
-					</table>
-					<input type="button" class="btn btn-default"
-						onclick="projectRow(this)" value="+"> <input type="button"
-						class="btn btn-default" onclick="projectRow(this)" value="-">
-				</div>
-			</div>
-
-
-
 
 			</tbody>
 			</table>
